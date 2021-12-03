@@ -25,10 +25,10 @@ app.listen(port, ()=>{
 
 // app.use("/kendaraanDanAlatBerat", kendaraanDanAlatBerat)
 // app.use("/jenisKendaraan", jenisKendaraan)
-app.get('/tes', (req, res)=>{
-    res.send('berhasi')
+app.get('/', (req, res)=>{
+    res.status(200).json({"msg":"berhasil"})
 })
-app.use("/", halamanUtama)
+app.use("/halamanUtama", halamanUtama)
 app.use("/jenisKendaraan", jenisKendaraan)
 app.use("/vehicle", vehicle)
 app.use(errorHandling)
